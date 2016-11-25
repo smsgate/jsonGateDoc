@@ -37,13 +37,14 @@ $param = array(
     'security' => array('login' => 'Логин', 'password' => 'Пароль'),
     'type' => 'sms'
 );
+$param_json = json_encode($param, true);
 // JSON-документ
 $href = 'https://имя_хоста/sendsmsjson.php'; // адрес сервера
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json','charset=utf-8'));
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_POST, true);
-curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($param, true));
+curl_setopt($ch, CURLOPT_POSTFIELDS, $param_json);
 curl_setopt($ch, CURLOPT_TIMEOUT, 600);
 curl_setopt($ch, CURLOPT_URL, $href);
 curl_setopt ($ch, CURLOPT_SSL_VERIFYPEER, 0);
