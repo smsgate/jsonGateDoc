@@ -41,7 +41,7 @@ $param_json = json_encode($param, true);
 // JSON-документ
 $href = 'https://имя_хоста/sendsmsjson.php'; // адрес сервера
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json','charset=utf-8'));
+curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json','charset=utf-8','Expect:'));
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $param_json);
