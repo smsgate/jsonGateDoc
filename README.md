@@ -100,7 +100,7 @@ $param = array(
             'type' => 'sms',
             'sender' => 'Отправитель 1',
             'text' => 'Текст сообщения 1',
-			'translite' => '1',
+            'translite' => '1',
             'abonent' => array(
                 array('phone' => '79033256699', 'number_sms' => '1', 'client_id_sms' => '100', 'time_send' => '2016-11-09 12:40', 'validity_period' => '2016-11-09 13:30'),
                 array('phone' => '79033256699', 'number_sms' => '2', 'client_id_sms' => '101')
