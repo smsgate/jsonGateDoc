@@ -72,6 +72,7 @@ https://имя_хоста/sendsmsjson.php
 			"type":"sms",
 			"sender":"Отправитель 1",
 			"text":"Текст сообщения 1",
+			"name_delivery":"Рассылка 1",
 			"translite":"1",
 			"abonent":[
 				{"phone":"79033256699","number_sms":"1","client_id_sms":"100","time_send":"2016-11-09 12:40","validity_period":"2016-11-09 13:30"},
@@ -82,6 +83,7 @@ https://имя_хоста/sendsmsjson.php
 			"type":"sms",
 			"sender":"Отправитель 2",
 			"text":"Текст сообщения 2",
+			"name_delivery":"Рассылка 2",
 			"abonent":[
 				{"phone":"79033256699","number_sms":"1","client_id_sms":"111"},
 				{"phone":"79033256699","number_sms":"2","client_id_sms":"112"}
@@ -100,6 +102,7 @@ $param = array(
             'type' => 'sms',
             'sender' => 'Отправитель 1',
             'text' => 'Текст сообщения 1',
+			'name_delivery' => 'Рассылка 1',
             'translite' => '1',
             'abonent' => array(
                 array('phone' => '79033256699', 'number_sms' => '1', 'client_id_sms' => '100', 'time_send' => '2016-11-09 12:40', 'validity_period' => '2016-11-09 13:30'),
@@ -110,6 +113,7 @@ $param = array(
             'type' => 'sms',
             'sender' => 'Отправитель 2',
             'text' => 'Текст сообщения 2',
+			'name_delivery' => 'Рассылка 2',
             'abonent' => array(
                 array('phone' => '79033256699', 'number_sms' => '1', 'client_id_sms' => '111'),
                 array('phone' => '79033256699', 'number_sms' => '2', 'client_id_sms' => '112')
@@ -128,6 +132,7 @@ $param = array(
 	* **type** - тип отправляемого SMS сообщения (sms - обычная SMS);
 	* **sender** – отправитель SMS. Именно это значение будет выводиться на телефоне абонента в поле от кого SMS;
 	* **text** – текст SMS;
+	* **sender** – Название рассылки. По умолчанию "Шлюз";
 	* **translite** - транслитерация текста SMS с кириллицы на латиницу (не обязательный параметр). Для транслитерации данный параметр должен быть равен 1;
 	* **abonent** - получатели SMS;
 		* **phone** – номер абонента, которому адресована SMS. В международном формате, например, 79000000001 (Для России), 380442589632 (Для Украины) и т.д.;
