@@ -102,7 +102,7 @@ $param = array(
             'type' => 'sms',
             'sender' => 'Отправитель 1',
             'text' => 'Текст сообщения 1',
-			'name_delivery' => 'Рассылка 1',
+            'name_delivery' => 'Рассылка 1',
             'translite' => '1',
             'abonent' => array(
                 array('phone' => '79033256699', 'number_sms' => '1', 'client_id_sms' => '100', 'time_send' => '2016-11-09 12:40', 'validity_period' => '2016-11-09 13:30'),
@@ -113,7 +113,7 @@ $param = array(
             'type' => 'sms',
             'sender' => 'Отправитель 2',
             'text' => 'Текст сообщения 2',
-			'name_delivery' => 'Рассылка 2',
+            'name_delivery' => 'Рассылка 2',
             'abonent' => array(
                 array('phone' => '79033256699', 'number_sms' => '1', 'client_id_sms' => '111'),
                 array('phone' => '79033256699', 'number_sms' => '2', 'client_id_sms' => '112')
