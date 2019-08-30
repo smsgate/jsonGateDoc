@@ -175,7 +175,7 @@ PHP (массив, полученный через php функцию json_decod
 ```php
 Array(
 	[sms] => Array(
-		[0] => Array ( [number_sms] => 1 [id_sms] => ID SMS в системе для проверки статуса [parts] => 1 [action] => Статус/сообщение об ошибке ),
+		[0] => Array ( [number_sms] => 1 [id_sms] => ID SMS в системе для проверки статуса [parts] => 1 [action] => Статус/сообщение об ошибке )
 		[1] => Array ( [number_sms] => 2 [id_sms] => ID SMS в системе для проверки статуса [parts] => 1 [action] => Статус/сообщение об ошибке )
 	)
 )
@@ -272,7 +272,7 @@ PHP (массив, полученный через php функцию json_decod
 ```php
 Array (
 	[state] => Array (
-		[0] => Array ( [id_sms] => ID SMS в системе для проверки статуса [time] => 2016-03-02 18:31:38 [state] => Статус/сообщение об ошибке [num_parts] => 2 [price] => 1.15 ),
+		[0] => Array ( [id_sms] => ID SMS в системе для проверки статуса [time] => 2016-03-02 18:31:38 [state] => Статус/сообщение об ошибке [num_parts] => 2 [price] => 1.15 )
 		[1] => Array ( [id_sms] => ID SMS в системе для проверки статуса [time] => 2016-03-02 18:31:39 [state] => Статус/сообщение об ошибке [num_parts] => 1 [price] => 1.15 )
 	)
 )
@@ -547,8 +547,8 @@ PHP (массив, полученный через php функцию json_decod
 ```php
 Array(
 	[sms] => Array(
-		[0] => Array ( [id_sms] => 1234 [date_receive] => 2012-01-31 12:55:55 [originator] => 79612242243 [prefix] => IGRA [phone] => 3434, [text_sms] => ТекстСМС. ),
-		[1] => Array ( [id_sms] => 1235 [date_receive] => 2012-01-31 12:55:55 [originator] => 79612242243 [prefix] => IGRA [phone] => 3434, [text_sms] => ТекстСМС. )
+		[0] => Array ( [id_sms] => 1234 [date_receive] => 2012-01-31 12:55:55 [originator] => 79612242243 [prefix] => IGRA [phone] => 3434 [text_sms] => ТекстСМС. )
+		[1] => Array ( [id_sms] => 1235 [date_receive] => 2012-01-31 12:55:55 [originator] => 79612242243 [prefix] => IGRA [phone] => 3434 [text_sms] => ТекстСМС. )
 	)
 )
 ```
@@ -626,7 +626,7 @@ PHP (массив, полученный через php функцию json_decod
 ```php
 Array(
 	[phones] => Array(
-		[0] => Array ( [phone] => 79612242243 [operator] => BeeLine [region] => Новосибирская область [time_zone] => 6 ),
+		[0] => Array ( [phone] => 79612242243 [operator] => BeeLine [region] => Новосибирская область [time_zone] => 6 )
 		[1] => Array ( [phone] => 79612242244 [operator] => BeeLine [region] => Новосибирская область [time_zone] => 6 )
 	)
 )
@@ -699,7 +699,7 @@ PHP (массив, полученный через php функцию json_decod
 ```php
 Array (
 	[base] => Array (
-		[0] => Array ( [id_sms] => 1234 [name_base] => Базаглавногоофиса [time_birth] => 12:48 [local_time_birth] => yes [day_before] => 0 [originator_birth] => fitnes [on_birth] => yes [text_birth] => Поздравляем! ),
+		[0] => Array ( [id_sms] => 1234 [name_base] => Базаглавногоофиса [time_birth] => 12:48 [local_time_birth] => yes [day_before] => 0 [originator_birth] => fitnes [on_birth] => yes [text_birth] => Поздравляем! )
 		[1] => Array ( [id_sms] => 1235 [name_base] => БазаМосковскогоофиса [time_birth] => 12:48 [local_time_birth] => yes [day_before] => 1 [originator_birth] => fitnes [on_birth] => no [text_birth] => Поздравляем! )
 	)
 )
@@ -805,9 +805,9 @@ PHP (массив, полученный через php функцию json_decod
 ```php
 Array (
 	[bases] => Array (
-		[0] => Array ( [id_base] => 1234 [action] => edit ),
-		[1] => Array ( [id_base] => 1235 [action] => insert [number_base] => 1 ),
-		[2] => Array ( [id_base] => 1236 [action] => delete ),
+		[0] => Array ( [id_base] => 1234 [action] => edit )
+		[1] => Array ( [id_base] => 1235 [action] => insert [number_base] => 1 )
+		[2] => Array ( [id_base] => 1236 [action] => delete )
 		[3] => Array ( [id_base] => 1237 [action] => not_found )
 	)
 )
@@ -1403,7 +1403,7 @@ $param = array(
 JSON:
 ```json
 {
-	"error":"текст ошибки"
+    "error":"текст ошибки"
 }
 ```
 PHP (массив, полученный через php функцию json_decode):
@@ -1714,8 +1714,8 @@ PHP (массив, полученный через php функцию json_decod
 ```php
 Array (
 	[patterns] => Array (
-		[0] => Array ( [id_pattern] => 1234 [action] => edit ),
-		[1] => Array ( [id_pattern] => 1236 [action] => insert [number_pattern] => 1 ),
+		[0] => Array ( [id_pattern] => 1234 [action] => edit )
+		[1] => Array ( [id_pattern] => 1236 [action] => insert [number_pattern] => 1 )
 		[2] => Array ( [id_pattern] => 1235 [action] => delete )
 	)
 )
@@ -1730,3 +1730,232 @@ Array (
 	3. «delete» - шаблон удалена;
 	4. «not_found» - шаблон с указанным идентификатором не обнаружен;    
 * **number_pattern** - номер шаблона в JSON запросе. Используется для сопоставления ID добавленных шаблона(если их было не сколько в запросе).
+
+# Запрос на получение реестра имен отправителей
+**Адрес сервера:**
+```
+https://имя_хоста/sendsmsjson.php
+```
+**JSON-документ:**
+```json
+{
+	"security":{
+		"login":"логин",
+		"password":"пароль"
+	},
+	"type":"list_registry_originator",
+	"registry_originator":{"operator":"Оператор","originator":"Имя отправителя","inn":"ИНН"}
+}
+```
+**PHP-данные:**
+```php
+$param = array(
+    'security' => array('login' => 'логин', 'password' => 'пароль'),
+    'type' => 'list_registry_originator',
+    'registry_originator' => array('operator' => 'Оператор', 'originator' => 'Имя отправителя', 'inn' => 'ИНН')
+);
+```
+
+Где:
+* **security** - данные для авторизации:
+	* **login** - ваш логин в системе;
+	* **password** - ваш пароль в системе;
+* **type** - тип запроса (list_registry_originator - список реестра имен);
+* **registry_originator** - Фильтр вывода реестра имен отправителей:
+	* **operator** - Оператор. Доступны такие операторы как: **mts** - МТС, **mega** - Мегафон, **tele2** - Теле2. Необязательное поле.
+	* **originator** - Имя отправителя. Необязательное поле.
+	* **inn** - Идентификационный номер налогоплательщика. Необязательное поле.
+
+В ответ может быть выдан один из следующих JSON-документов:
+### В случае возникновения ошибки в отправляемом JSON-документе:
+
+JSON:
+```json
+{
+	"error":"текст ошибки"
+}
+```
+PHP (массив, полученный через php функцию json_decode):
+```php
+array ('error' => 'текст ошибки')
+```
+**error** - текст ошибки может принимать следующие значения:
+1. Неправильный формат JSON документа;
+2. Неправильный логин или пароль;
+3. POST данные отсутствуют;
+
+### В случае получения правильного JSON-документа:
+
+JSON:
+```json
+{
+	"registry_originator":[
+        {
+            "operator":{"name":"mts","title":"МТС"},
+            "originator":[
+                {"originator":"Отправитель 1","date_from":"2017-05-20","legal_entity":"ИП Иванов","inn":"ИНН","comment":"Комментраий","status":"approval","status_text":"Согласовано"},
+                {"originator":"Отправитель 2","date_from":"2017-05-20","legal_entity":"ИП Иванов","inn":"ИНН","comment":"Комментраий","status":"posted_for_approval","status_text":"Подано на согласование"}
+            ]
+        },
+        {
+            "operator":{"name":"mega","title":"Мегафон"},
+            "originator":[
+                {"originator":"Отправитель 1","date_from":"2017-05-20","legal_entity":"ИП Иванов","inn":"ИНН","comment":"Комментраий","status":"approval","status_text":"Согласовано"},
+                {"originator":"Отправитель 2","date_from":"2017-05-20","legal_entity":"ИП Иванов","inn":"ИНН","comment":"Комментраий","status":"posted_for_approval","status_text":"Подано на согласование"}
+            ]
+        }
+	]
+}
+```
+PHP (массив, полученный через php функцию json_decode):
+```php
+Array ( 
+    [registry_originator] => Array (
+        [0] => Array ( 
+            [operator] => Array ( [name] => mts [title] => МТС )
+            [originator] => Array (
+                [0] => Array ( [originator] => Отправитель 1 [date_from] => 2017-05-20 [legal_entity] => ИП Иванов [inn] => ИНН [comment] => Комментраий [status] => approval [status_text] => Согласовано )
+                [1] => Array ( [originator] => Отправитель 2 [date_from] => 2017-05-20 [legal_entity] => ИП Иванов [inn] => ИНН [comment] => Комментраий [status] => approval [posted_for_approval] => Подано на согласование )
+            )
+        )
+        [1] => Array ( 
+            [operator] => Array ( [name] => mega [title] => Мегафон )
+            [originator] => Array (
+                [0] => Array ( [originator] => Отправитель 1 [date_from] => 2017-05-20 [legal_entity] => ИП Иванов [inn] => ИНН [comment] => Комментраий [status] => approval [status_text] => Согласовано )
+                [1] => Array ( [originator] => Отправитель 2 [date_from] => 2017-05-20 [legal_entity] => ИП Иванов [inn] => ИНН [comment] => Комментраий [status] => approval [posted_for_approval] => Подано на согласование )
+            )
+        ) 
+    )
+)
+```
+
+Где:
+* **operator name** - Оператор. mts, mega, tele2.
+* **operator title** - Заголовок оператора. МТС, Мегафон, Теле2. 
+* **originator** - Имя Отправителя.
+* **date_from** - Дата начала.
+* **legal_entity** - Юр.Лицо.
+* **inn** - Идентификационный номер налогоплательщика.
+* **comment** - Комментарий.
+* **status** - Статус:
+	1. «posted_for_approval» - Подано на согласование;
+    2. «send_for_approval» - Отправлено на согласование;
+	3. «approval» - Согласовано;
+    4. «not_approval» - Не согласовано;
+    5. «send_for_delete» - Подано на удаление;
+	6. «delete» - Удалено;
+* **status_text** - Статус, описание.
+
+# Запрос на добавление удаление имен отправителей в реестре имен отправителей
+**Адрес сервера:**
+```
+https://имя_хоста/sendsmsjson.php
+```
+**JSON-документ:**
+```json
+{
+    "security":{
+        "login":"логин",
+        "password":"пароль"
+    },
+    "type":"registry_originator",
+    "registry_originator":[
+        {"originator":"Отправитель 1","legal_entity":"ИП Иванов","operator":"mts","inn":"ИНН","comment":"Комментарий"},
+        {"originator":"Отправитель 1","legal_entity":"ИП Иванов","operator":"tele2","inn":"ИНН","comment":"Комментарий"},
+        {"originator":"Отправитель 2","legal_entity":"ИП Иванов","operator":"mts","inn":"ИНН"}
+    ],
+    "delete_registry_originator":[
+        {"originator":"Отправитель 3"},
+        {"originator":"Отправитель 4","operator":"mega"}
+    ]
+}
+```
+**PHP-данные:**
+```php
+$param = array(
+    'security' => array('login' => 'логин', 'password' => 'пароль'),
+    'type' => 'registry_originator',
+    'registry_originator' => array(
+        array('originator' => 'Отправитель 1', 'legal_entity' => 'ИП Иванов', 'operator' => 'mts', 'inn' => 'ИНН', 'comment' => 'Комментарий'),
+        array('originator' => 'Отправитель 1', 'legal_entity' => 'ИП Иванов', 'operator' => 'tele2', 'inn' => 'ИНН', 'comment' => 'Комментарий'),
+        array('originator' => 'Отправитель 2', 'legal_entity' => 'ИП Иванов', 'operator' => 'mts', 'inn' => 'ИНН')
+    ),
+    'delete_registry_originator' => array(
+        array('originator' => 'Отправитель 3'),
+        array('originator' => 'Отправитель 3', 'operator' => 'mega')
+    )
+);
+```
+
+* **login value** - ваш логин в системе.
+* **password value** - ваш пароль в системе.
+* **registry_originator** - Добавление имени отправителя:
+	* **originator** - Имя отправителя.
+	* **operator** - Оператор. Доступны такие операторы как: **mts** - МТС, **mega** - Мегафон, **tele2** - Теле2.
+	* **legal_entity** - Юр.Лицо.
+	* **inn** - Идентификационный номер налогоплательщика.
+	* **comment** - Комментарий. Необязательное поле.
+* **delete_registry_originator** - Удаление имени отправителя:
+	* **originator** - Имя отправителя.
+	* **operator** - Оператор. Доступны такие операторы как: **mts** - МТС, **mega** - Мегафон, **tele2** - Теле2. Необязательное поле. Если отсутствует, будет удалено имя отправителя по всем операторам.
+
+В ответ может быть выдан один из следующих JSON-документов:
+### В случае возникновения ошибки в отправляемом JSON-документе:
+
+JSON:
+```json
+{
+	"error":"текст ошибки"
+}
+```
+PHP (массив, полученный через php функцию json_decode):
+```php
+array ('error' => 'текст ошибки')
+```
+**error** - текст ошибки может принимать следующие значения:
+1. Неправильный формат JSON документа;
+2. Неправильный логин или пароль;
+3. POST данные отсутствуют;
+
+### В случае получения правильного JSON-документа:
+JSON:
+```json
+{
+    "registry_originator":[
+        {"originator":"Отправитель 1","operator":"mts","inn":"ИНН","status":"add","error":""},
+        {"originator":"Отправитель 1","operator":"tele2","inn":"ИНН","status":"error","error":"Описание ошибки"},
+        {"originator":"Отправитель 2","operator":"mts","inn":"ИНН","status":"add","error":""},
+    ],
+    "delete_registry_originator":[
+        {"originator":"Отправитель 3","operator":"","status":"delete","error":""},
+        {"originator":"Отправитель 4","operator":"mega","status":"not_found","error":"Имя отправителя не обнаружено"}
+    ]
+}
+```
+PHP (массив, полученный через php функцию json_decode):
+```php
+Array (
+    [registry_originator] => Array (
+        [0] => Array ( [originator] => Отправитель 1 [operator] => mts [inn] => ИНН [status] => add [error] => )
+        [1] => Array ( [originator] => Отправитель 1 [operator] => tele2 [inn] => ИНН [status] => error [error] => Описание ошибки )
+        [2] => Array ( [originator] => Отправитель 2 [operator] => mts [inn] => ИНН [status] => add [error] => )
+    )
+    [delete_registry_originator] => Array (
+        [0] => Array ( [originator] => Отправитель 3 [operator] => [status] => add [error] => )
+        [1] => Array ( [originator] => Отправитель 4 [operator] => mega [status] => not_found [error] => Имя отправителя не обнаружено )
+    )
+)
+```
+
+Где:
+* **registry_originator** - Добавленые имена отправителей:
+	* **originator** - Имя отправителя.
+	* **operator** - Оператор. mts, mega, tele2.
+	* **inn** - Идентификационный номер налогоплательщика.
+	* **status** - Статус. add - добавлено имя отправителя, error - ошибка.
+	* **error** - Описание ошибки.
+* **delete_registry_originator** - Удаленные имена отправителей:
+	* **originator** - Имя отправителя.
+	* **operator** - Оператор. mts, mega, tele2. Если отсутствует, удалено имя отправителя по всем операторам.
+	* **status** - Статус. not_found - подано на удаление, error - ошибка.
+	* **error** - Описание ошибки.
