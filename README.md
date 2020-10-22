@@ -77,8 +77,8 @@ https://имя_хоста/sendsmsjson.php
 			"name_delivery":"Рассылка 1",
 			"translite":"1",
 			"abonent":[
-				{"phone":"79033256699","number_sms":"1","client_id_sms":"100","time_send":"2016-11-09 12:40","validity_period":"2016-11-09 13:30"},
-				{"phone":"79033256699","number_sms":"2","client_id_sms":"101"}
+				{"phone":"79001234567","number_sms":"1","client_id_sms":"100","time_send":"2016-11-09 12:40","validity_period":"2016-11-09 13:30"},
+				{"phone":"79001234568","number_sms":"2","client_id_sms":"101"}
 			]
 		},
 		{
@@ -87,8 +87,8 @@ https://имя_хоста/sendsmsjson.php
 			"text":"Текст сообщения 2",
 			"name_delivery":"Рассылка 2",
 			"abonent":[
-				{"phone":"79033256699","number_sms":"1","client_id_sms":"111"},
-				{"phone":"79033256699","number_sms":"2","client_id_sms":"112"}
+				{"phone":"79001234569","number_sms":"1","client_id_sms":"111"},
+				{"phone":"79001234570","number_sms":"2","client_id_sms":"112"}
 			]
 		}
 	]
@@ -107,8 +107,8 @@ $param = array(
             'name_delivery' => 'Рассылка 1',
             'translite' => '1',
             'abonent' => array(
-                array('phone' => '79033256699', 'number_sms' => '1', 'client_id_sms' => '100', 'time_send' => '2016-11-09 12:40', 'validity_period' => '2016-11-09 13:30'),
-                array('phone' => '79033256699', 'number_sms' => '2', 'client_id_sms' => '101')
+                array('phone' => '79001234567', 'number_sms' => '1', 'client_id_sms' => '100', 'time_send' => '2016-11-09 12:40', 'validity_period' => '2016-11-09 13:30'),
+                array('phone' => '79001234568', 'number_sms' => '2', 'client_id_sms' => '101')
             )
         ),
 		array(
@@ -117,8 +117,8 @@ $param = array(
             'text' => 'Текст сообщения 2',
             'name_delivery' => 'Рассылка 2',
             'abonent' => array(
-                array('phone' => '79033256699', 'number_sms' => '1', 'client_id_sms' => '111'),
-                array('phone' => '79033256699', 'number_sms' => '2', 'client_id_sms' => '112')
+                array('phone' => '79001234569', 'number_sms' => '1', 'client_id_sms' => '111'),
+                array('phone' => '79001234570', 'number_sms' => '2', 'client_id_sms' => '112')
             )
         )
     )
@@ -137,7 +137,7 @@ $param = array(
 	* **name_delivery** – Название рассылки. По умолчанию "Шлюз";
 	* **translite** - транслитерация текста SMS с кириллицы на латиницу (не обязательный параметр). Для транслитерации данный параметр должен быть равен 1;
 	* **abonent** - получатели SMS;
-		* **phone** – номер абонента, которому адресована SMS. В международном формате, например, 79000000001 (Для России), 380442589632 (Для Украины) и т.д.;
+		* **phone** – номер абонента, которому адресована SMS. В международном формате, например, 79000000001 (Для России), 380441234567 (Для Украины) и т.д.;
 		* **number_sms**  - номер сообщения в пределах отправляемого JSON документа;
 		* **client_id_sms** - число. Необязательный параметр, позволяет избежать повторной отправки. Если раннее с этого аккаунта уже было отправлено SMS с таким номером, то повторная отправка не производится, а возвращается номер ранее отправленного SMS;
 		* **time_send** – дата и время отправки в формате: YYYY-MM-DD hh:mm где, YYYY-год, MM-месяц, DD-день, hh-часы, mm-минуты. Если не задано, то SMS отправляется сразу же;
@@ -493,8 +493,8 @@ https://имя_хоста/sendsmsjson.php
 	},
 	"type":"incoming",
 	"time":{
-		"start":"2016-08-25 15:28:37",
-		"end":"2012-02-31 12:23:00"
+		"start":"2016-08-25 15:28:38",
+		"end":"2018-02-31 12:24:00"
 	}
 }
 ```
@@ -503,7 +503,7 @@ https://имя_хоста/sendsmsjson.php
 $param = array(
     'security' => array('login' => 'логин', 'password' => 'пароль'),
     'type' => 'incoming',
-    'time' => array('start' => '2012-01-31 12:23:00', 'end' => )
+    'time' => array('start' => '2016-08-25 15:28:38', 'end' => )
 );
 ```
 
@@ -540,8 +540,8 @@ JSON:
 ```json
 {
 	"sms":[
-		{"id_sms":"1234","date_receive":"2012-01-31 12:55:55","originator":"79612242243","prefix":"IGRA","phone":"3434","text_sms":"ТекстСМС."},
-		{"id_sms":"1235","date_receive":"2012-01-31 12:55:55","originator":"79612242243","prefix":"IGRA","phone":"3434","text_sms":"ТекстСМС."}
+		{"id_sms":"1234","date_receive":"2016-08-25 15:28:38","originator":"79001234567","prefix":"IGRA","phone":"3434","text_sms":"ТекстСМС."},
+		{"id_sms":"1235","date_receive":"2016-08-25 15:29:38","originator":"79001234568","prefix":"IGRA","phone":"3434","text_sms":"ТекстСМС."}
 	]
 }
 ```
@@ -549,8 +549,8 @@ PHP (массив, полученный через php функцию json_decod
 ```php
 Array(
 	[sms] => Array(
-		[0] => Array ( [id_sms] => 1234 [date_receive] => 2012-01-31 12:55:55 [originator] => 79612242243 [prefix] => IGRA [phone] => 3434 [text_sms] => ТекстСМС. )
-		[1] => Array ( [id_sms] => 1235 [date_receive] => 2012-01-31 12:55:55 [originator] => 79612242243 [prefix] => IGRA [phone] => 3434 [text_sms] => ТекстСМС. )
+		[0] => Array ( [id_sms] => 1234 [date_receive] => 2016-08-25 15:28:38 [originator] => 79001234567 [prefix] => IGRA [phone] => 3434 [text_sms] => ТекстСМС. )
+		[1] => Array ( [id_sms] => 1235 [date_receive] => 2016-08-25 15:29:38 [originator] => 79001234568 [prefix] => IGRA [phone] => 3434 [text_sms] => ТекстСМС. )
 	)
 )
 ```
@@ -576,7 +576,7 @@ https://имя_хоста/sendsmsjson.php
 		"password":"пароль"
 	},
 	"type":"def",
-	"phones":["79612242243","79612242244"]
+	"phones":["79001234567","79001234568"]
 }
 ```
 **PHP-данные:**
@@ -584,7 +584,7 @@ https://имя_хоста/sendsmsjson.php
 $param = array(
     'security' => array('login' => 'логин', 'password' => 'пароль'),
     'type' => 'def',
-    'phones' => array('79612242243', '79612242244')
+    'phones' => array('79001234567', '79001234568')
 );
 ```
 
@@ -619,8 +619,8 @@ JSON:
 ```json
 {
 	"phones":[
-		{"phone":"79612242243","operator":"BeeLine","region":"Новосибирская область","time_zone":"6"},
-		{"phone":"79612242244","operator":"BeeLine","region":"Новосибирская область","time_zone":"6"}
+		{"phone":"79001234567","operator":"BeeLine","region":"Московская область","time_zone":"3"},
+		{"phone":"79001234568","operator":"BeeLine","region":"Московская область","time_zone":"3"}
 	]
 }
 ```
@@ -628,8 +628,8 @@ PHP (массив, полученный через php функцию json_decod
 ```php
 Array(
 	[phones] => Array(
-		[0] => Array ( [phone] => 79612242243 [operator] => BeeLine [region] => Новосибирская область [time_zone] => 6 )
-		[1] => Array ( [phone] => 79612242244 [operator] => BeeLine [region] => Новосибирская область [time_zone] => 6 )
+		[0] => Array ( [phone] => 79001234567 [operator] => BeeLine [region] => Московская область [time_zone] => 3 )
+		[1] => Array ( [phone] => 79001234568 [operator] => BeeLine [region] => Московская область [time_zone] => 3 )
 	)
 )
 ```
@@ -886,8 +886,8 @@ JSON:
 	"page":"1",
 	"num_pages":"100",
 	"phones":[
-		{"phone":"79612242243","region":"Новосибирск","operator":"Вымпелком","name":"Константин","surname":"Ермолаев","patronymic":"Александрович","date_birth":"1984-08-21","male":"m","addition_1":"Первоедополнительноеполе","addition_2":"второе","addition_3":"третье","addition_4":"четвертое","addition_5":"пятое","last_update":"2016-11-15 11:02:29"},
-		{"phone":"79612242244","region":"Новосибирск","operator":"Вымпелком","name":"Константин","surname":"Ермолаев","patronymic":"Александрович","date_birth":"1984-08-21","male":"m","addition_1":"Первоедополнительноеполе","addition_2":"второе","addition_3":"третье","addition_4":"четвертое","addition_5":"пятое","last_update":"2016-11-15 11:02:29"}
+		{"phone":"79001234567","region":"Москва","operator":"Мегафон","name":"Иван","surname":"Иванов","patronymic":"Иванович","date_birth":"1984-08-21","male":"m","addition_1":"Первоедополнительноеполе","addition_2":"второе","addition_3":"третье","addition_4":"четвертое","addition_5":"пятое","last_update":"2016-11-15 11:02:29"},
+		{"phone":"79001234568","region":"Москва","operator":"Мегафон","name":"Иван","surname":"Иванов","patronymic":"Иванович","date_birth":"1984-08-21","male":"m","addition_1":"Первоедополнительноеполе","addition_2":"второе","addition_3":"третье","addition_4":"четвертое","addition_5":"пятое","last_update":"2016-11-15 11:02:29"}
 	]
 }
 ```
@@ -897,8 +897,8 @@ Array (
 	[page] => 1
 	[num_pages] => 100
 	[phones] => Array (
-		[0] => Array ( [phone] => 79612242244 [region] => Новосибирск [operator] => Вымпелком [name] => Константин [surname] => Ермолаев [patronymic] => Александрович [date_birth] => 1984-08-21 [male] => m [addition_1] => Первоедополнительноеполе [addition_2] => второе [addition_3] => третье [addition_4] => четвертое [addition_5] => пятое [last_update] => 2016-11-15 11:02:29 )
-		[1] => Array ( [phone] => 79612242244 [region] => Новосибирск [operator] => Вымпелком [name] => Константин [surname] => Ермолаев [patronymic] => Александрович [date_birth] => 1984-08-21 [male] => m [addition_1] => Первоедополнительноеполе [addition_2] => второе [addition_3] => третье [addition_4] => четвертое [addition_5] => пятое [last_update] => 2016-11-15 11:02:29 )
+		[0] => Array ( [phone] => 79001234567 [region] => Москва [operator] => Мегафон [name] => Иван [surname] => Иванов [patronymic] => Иванович [date_birth] => 1984-08-21 [male] => m [addition_1] => Первоедополнительноеполе [addition_2] => второе [addition_3] => третье [addition_4] => четвертое [addition_5] => пятое [last_update] => 2016-11-15 11:02:29 )
+		[1] => Array ( [phone] => 79001234568 [region] => Москва [operator] => Мегафон [name] => Иван [surname] => Иванов [patronymic] => Иванович [date_birth] => 1984-08-21 [male] => m [addition_1] => Первоедополнительноеполе [addition_2] => второе [addition_3] => третье [addition_4] => четвертое [addition_5] => пятое [last_update] => 2016-11-15 11:02:29 )
 	)
 )
 ```
@@ -936,8 +936,8 @@ https://имя_хоста/sendsmsjson.php
 	"type":"phones",
 	"id_base":"1234",
 	"phones":[
-		{"phone":"79612242243","region":"Новосибирск","operator":"Вымпелком","name":"Константин","surname":"Ермолаев","patronymic":"Александрович","date_birth":"1984-08-21","male":"мужской","addition_1":"Первоедополнительноеполе","addition_2":"второе","addition_3":"третье","addition_4":"четвертое","addition_5":"пятое","number_phone":"1"},
-		{"phone":"79612242244","region":"Новосибирск","operator":"Вымпелком","name":"Константин","surname":"Ермолаев","patronymic":"Александрович","date_birth":"1984-08-21","male":"мужской","addition_1":"Первоедополнительноеполе","addition_2":"второе","addition_3":"третье","addition_4":"четвертое","addition_5":"пятое","number_phone":"2"},
+		{"phone":"79001234567","region":"Москва","operator":"Мегафон","name":"Иван","surname":"Иванов","patronymic":"Иванович","date_birth":"1985-09-21","male":"мужской","addition_1":"Первоедополнительноеполе","addition_2":"второе","addition_3":"третье","addition_4":"четвертое","addition_5":"пятое","number_phone":"1"},
+		{"phone":"79001234568","region":"Москва","operator":"Мегафон","name":"Иван","surname":"Иванов","patronymic":"Иванович","date_birth":"1985-09-21","male":"мужской","addition_1":"Первоедополнительноеполе","addition_2":"второе","addition_3":"третье","addition_4":"четвертое","addition_5":"пятое","number_phone":"2"},
 		{"phone":"79612242245","action":"delete","number_phone":"5"},
 		{"phone":"79612242246","action":"delete","number_phone":"6"}
 	]
@@ -950,10 +950,10 @@ $param = array(
     'type' => 'phones',
 	'id_base' => '1234',
     'phones' => array(
-        array('phone' => '79612242243', 'region' => 'Новосибирск', 'operator' => 'Вымпелком', 'name' => 'Константин', 'surname' => 'Ермолаев', 'patronymic' => 'Александрович', 'date_birth' => '1984-08-21', 'male' => 'мужской', 'addition_1' => 'Первоедополнительноеполе', 'addition_2' => 'второе', 'addition_3' => 'третье', 'addition_4' => 'четвертое', 'addition_5' => 'пятое', 'number_phone' => '1'),
-        array('phone' => '79612242244', 'region' => 'Новосибирск', 'operator' => 'Вымпелком', 'name' => 'Константин', 'surname' => 'Ермолаев', 'patronymic' => 'Александрович', 'date_birth' => '1984-08-21', 'male' => 'мужской', 'addition_1' => 'Первоедополнительноеполе', 'addition_2' => 'второе', 'addition_3' => 'третье', 'addition_4' => 'четвертое', 'addition_5' => 'пятое', 'number_phone' => '2'),
-        array('phone' => '79612242244', 'action' => 'delete', 'number_phone' => '5'),
-        array('phone' => '79612242245', 'action' => 'delete', 'number_phone' => '6')
+        array('phone' => '79001234567', 'region' => 'Москва', 'operator' => 'Мегафон', 'name' => 'Иван', 'surname' => 'Иванов', 'patronymic' => 'Иванович', 'date_birth' => '1985-09-21', 'male' => 'мужской', 'addition_1' => 'Первоедополнительноеполе', 'addition_2' => 'второе', 'addition_3' => 'третье', 'addition_4' => 'четвертое', 'addition_5' => 'пятое', 'number_phone' => '1'),
+        array('phone' => '79001234568', 'region' => 'Москва', 'operator' => 'Мегафон', 'name' => 'Иван', 'surname' => 'Иванов', 'patronymic' => 'Иванович', 'date_birth' => '1985-09-21', 'male' => 'мужской', 'addition_1' => 'Первоедополнительноеполе', 'addition_2' => 'второе', 'addition_3' => 'третье', 'addition_4' => 'четвертое', 'addition_5' => 'пятое', 'number_phone' => '2'),
+        array('phone' => '79001234569', 'action' => 'delete', 'number_phone' => '5'),
+        array('phone' => '79001234570', 'action' => 'delete', 'number_phone' => '6')
     )
 );
 ```
@@ -1007,10 +1007,10 @@ JSON:
 {
 	"id_base":"1234",
 	"phones":[
-		{"phone":"79612242243","number_phone":"1","action":"edit"},
-		{"phone":"79612242244","number_phone":"2","action":"insert"},
-		{"phone":"79612242245","number_phone":"5","action":"delete"},
-		{"phone":"79612242246","number_phone":"6","action":"not_found"}
+		{"phone":"79001234567","number_phone":"1","action":"edit"},
+		{"phone":"79001234568","number_phone":"2","action":"insert"},
+		{"phone":"79001234569","number_phone":"5","action":"delete"},
+		{"phone":"79001234570","number_phone":"6","action":"not_found"}
 	]
 }
 ```
@@ -1019,10 +1019,10 @@ PHP (массив, полученный через php функцию json_decod
 Array ( 
 	[id_base] => 1234
 	[phones] => Array (
-		[0] => Array ( [phone] => 79612242243 [number_phone] => 1 [action] => edit )
-		[1] => Array ( [phone] => 79612242244 [number_phone] => 2 [action] => insert )
-		[2] => Array ( [phone] => 79612242245 [number_phone] => 5 [action] => delete )
-		[3] => Array ( [phone] => 79612242246 [number_phone] => 6 [action] => not_found )
+		[0] => Array ( [phone] => 79001234567 [number_phone] => 1 [action] => edit )
+		[1] => Array ( [phone] => 79001234568 [number_phone] => 2 [action] => insert )
+		[2] => Array ( [phone] => 79001234569 [number_phone] => 5 [action] => delete )
+		[3] => Array ( [phone] => 79001234570 [number_phone] => 6 [action] => not_found )
 	)
 )
 ```
@@ -1090,13 +1090,13 @@ array ('error' => 'текст ошибки')
 JSON:
 ```json
 {
-	"phones":["79000000001","79000000002","79000000003","79805364198"]
+	"phones":["79000000001","79000000002","79000000003","79001234567"]
 }
 ```
 PHP (массив, полученный через php функцию json_decode):
 ```php
 Array ( 
-	[phones] => Array ( [0] => 79000000001 [1] => 79000000002 [2] => 79000000003 [3] => 79805364198 )
+	[phones] => Array ( [0] => 79000000001 [1] => 79000000002 [2] => 79000000003 [3] => 79001234567 )
 )
 ```
 
@@ -1116,8 +1116,8 @@ https://имя_хоста/sendsmsjson.php
 		"password":"пароль"
 	},
 	"type":"stop",
-	"add_stop":["79612242243","79612242244","79612242245"],
-	"delete_stop":["79612242246","79612242247"]
+	"add_stop":["79001234567","79001234568","79001234569"],
+	"delete_stop":["79001234566","79001234565"]
 }
 ```
 **PHP-данные:**
@@ -1125,8 +1125,8 @@ https://имя_хоста/sendsmsjson.php
 $param = array(
     'security' => array('login' => 'логин', 'password' => 'пароль'),
     'type' => 'stop',
-    'add_stop' => array('79612242243', '79612242244', '79612242245'),
-	'delete_stop' => array('79612242246', '79612242247'),
+    'add_stop' => array('79001234567', '79001234568', '79001234569'),
+	'delete_stop' => array('79001234566', '79001234565'),
 );
 ```
 
@@ -1162,11 +1162,11 @@ JSON:
 ```json
 {
 	"phones":[
-		{"phone":"79612242243","action":"add"},
-		{"phone":"79612242244","action":"add"},
-		{"phone":"79612242245","action":"add"},
-		{"phone":"79612242246","action":"delete"},
-		{"phone":"79612242247","action":"not_found"}
+		{"phone":"79001234567","action":"add"},
+		{"phone":"79001234568","action":"add"},
+		{"phone":"79001234569","action":"add"},
+		{"phone":"79001234570","action":"delete"},
+		{"phone":"79001234571","action":"not_found"}
 	]
 }
 ```
@@ -1174,11 +1174,11 @@ PHP (массив, полученный через php функцию json_decod
 ```php
 Array ( 
 	[phones] => Array (
-		[0] => Array ( [phone] => 79612242243 [action] => add )
-		[1] => Array ( [phone] => 79612242244 [action] => add )
-		[2] => Array ( [phone] => 79612242245 [action] => add )
-		[3] => Array ( [phone] => 79612242246 [action] => delete )
-		[4] => Array ( [phone] => 79612242247 [action] => not_found )
+		[0] => Array ( [phone] => 79001234567 [action] => add )
+		[1] => Array ( [phone] => 79001234568 [action] => add )
+		[2] => Array ( [phone] => 79001234569 [action] => add )
+		[3] => Array ( [phone] => 79001234570 [action] => delete )
+		[4] => Array ( [phone] => 79001234571 [action] => not_found )
 	)
 )
 ```
@@ -1249,8 +1249,8 @@ JSON:
 	"page":"1",
 	"num_pages":"100",
 	"scheduled":[
-		{"id_sms":"1234","time_put_turn":"2016-08-31 14:56:53","originator":"fitnes","phone":"79612242243","type_sms":"sms","text_sms":"ТекстSMS","count_sms":"2","name_delivery":"Названиерасылки","time_send":"2016-08-30 21:00","validity_period":"2016-09-03 14:56:53"},
-		{"id_sms":"1235","time_put_turn":"2016-08-31 14:56:53","originator":"fitnes","phone":"79612242244","type_sms":"sms","text_sms":"ТекстSMS","count_sms":"2","name_delivery":"Названиерасылки","time_send":"2016-08-30 21:00","validity_period":"2016-09-03 14:56:53"}
+		{"id_sms":"1234","time_put_turn":"2016-08-31 14:56:53","originator":"fitnes","phone":"79001234567","type_sms":"sms","text_sms":"ТекстSMS","count_sms":"2","name_delivery":"Названиерасылки","time_send":"2016-08-30 21:00","validity_period":"2016-09-03 14:56:53"},
+		{"id_sms":"1235","time_put_turn":"2016-08-31 14:56:53","originator":"fitnes","phone":"79001234568","type_sms":"sms","text_sms":"ТекстSMS","count_sms":"2","name_delivery":"Названиерасылки","time_send":"2016-08-30 21:00","validity_period":"2016-09-03 14:56:53"}
 	]
 }
 ```
@@ -1260,8 +1260,8 @@ Array (
 	[page] => 1
 	[num_pages] => 100
 	[scheduled] => Array (
-		[0] => Array ( [id_sms] => 1234 [time_put_turn] => 2016-08-31 14:56:53 [originator] => fitnes [phone] => 79612242243 [type_sms] => sms [text_sms] => ТекстSMS [count_sms] => 2 [name_delivery] => Названиерасылки [time_send] => 2016-08-30 21:00 [validity_period] => 2016-09-03 14:56:53 )
-		[1] => Array ( [id_sms] => 1235 [time_put_turn] => 2016-08-31 14:56:53 [originator] => fitnes [phone] => 79612242244 [type_sms] => sms [text_sms] => ТекстSMS [count_sms] => 2 [name_delivery] => Названиерасылки [time_send] => 2016-08-30 21:00 [validity_period] => 2016-09-03 14:56:53 )
+		[0] => Array ( [id_sms] => 1234 [time_put_turn] => 2016-08-31 14:56:53 [originator] => fitnes [phone] => 79001234567 [type_sms] => sms [text_sms] => ТекстSMS [count_sms] => 2 [name_delivery] => Названиерасылки [time_send] => 2016-08-30 21:00 [validity_period] => 2016-09-03 14:56:53 )
+		[1] => Array ( [id_sms] => 1235 [time_put_turn] => 2016-08-31 14:56:53 [originator] => fitnes [phone] => 79001234568 [type_sms] => sms [text_sms] => ТекстSMS [count_sms] => 2 [name_delivery] => Названиерасылки [time_send] => 2016-08-30 21:00 [validity_period] => 2016-09-03 14:56:53 )
 	)
 )
 ```
@@ -1522,8 +1522,8 @@ JSON:
 {
 	"num_stats":"1",
 	"stats":[
-		{"id_sms":"324044392","id_state":"1229469388","operator":"МТС","name_delivery":"Названиерасылки","phone":"79612242243","originator":"INCORE","time_change_state":"2016-03-09 20:37:17","time":"2016-03-09 20:37:02","status":"deliver","status_translate":"Доставлено","text":"ТекстSMS","price":"1.5","num_parts":"2","part_no":"1"},
-		{"id_sms":"324044392","id_state":"1229469389","operator":"МТС","name_delivery":"Названиерасылки","phone":"79612242243","originator":"INCORE","time_change_state":"2016-03-09 20:37:17","time":"2016-03-09 20:37:02","status":"deliver","status_translate":"Доставлено","text":"ТекстSMS","price":"1.5","num_parts":"2","part_no":"2"}
+		{"id_sms":"100123","id_state":"2000123","operator":"МТС","name_delivery":"Названиерасылки","phone":"79001234567","originator":"SENDER_1","time_change_state":"2016-03-09 20:37:17","time":"2016-03-09 20:37:02","status":"deliver","status_translate":"Доставлено","text":"ТекстSMS","price":"1.5","num_parts":"2","part_no":"1"},
+		{"id_sms":"100124","id_state":"2000124","operator":"МТС","name_delivery":"Названиерасылки","phone":"79001234568","originator":"SENDER_1","time_change_state":"2016-03-09 20:37:17","time":"2016-03-09 20:37:02","status":"deliver","status_translate":"Доставлено","text":"ТекстSMS","price":"1.5","num_parts":"2","part_no":"2"}
 		
 	]
 }
@@ -1533,8 +1533,8 @@ PHP (массив, полученный через php функцию json_decod
 Array ( 
 	[num_stats] => 1
 	[stats] => Array (
-		[0] => Array ( [id_sms] => 324044392 [id_state] => 1229469388 [operator] => МТС [name_delivery] => Названиерасылки [phone] => 79612242243 [originator] => INCORE [time_change_state] => 2016-03-09 20:37:17 [time] => 2016-03-09 20:37:02 [status] => deliver [status_translate] => Доставлено [text] => ТекстSMS [price] => 1.5 [num_parts] => 2 [part_no] => 1 )
-		[1] => Array ( [id_sms] => 324044392 [id_state] => 1229469389 [operator] => МТС [name_delivery] => Названиерасылки [phone] => 79612242243 [originator] => INCORE [time_change_state] => 2016-03-09 20:37:17 [time] => 2016-03-09 20:37:02 [status] => deliver [status_translate] => Доставлено [text] => ТекстSMS [price] => 1.5 [num_parts] => 2 [part_no] => 2 )
+		[0] => Array ( [id_sms] => 100123 [id_state] => 2000123 [operator] => МТС [name_delivery] => Названиерасылки [phone] => 79001234567 [originator] => SENDER_1 [time_change_state] => 2016-03-09 20:37:17 [time] => 2016-03-09 20:37:02 [status] => deliver [status_translate] => Доставлено [text] => ТекстSMS [price] => 1.5 [num_parts] => 2 [part_no] => 1 )
+		[1] => Array ( [id_sms] => 100124 [id_state] => 2000124 [operator] => МТС [name_delivery] => Названиерасылки [phone] => 79001234568 [originator] => SENDER_1 [time_change_state] => 2016-03-09 20:37:17 [time] => 2016-03-09 20:37:02 [status] => deliver [status_translate] => Доставлено [text] => ТекстSMS [price] => 1.5 [num_parts] => 2 [part_no] => 2 )
 	)
 )
 ```
