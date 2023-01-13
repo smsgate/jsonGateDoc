@@ -82,11 +82,11 @@ https://имя_хоста/sendsmsjson.php
 				{"phone":"79001234567","number_sms":"1","client_id_sms":"100","time_send":"2016-11-09 12:40","validity_period":"2016-11-09 13:30"},
 				{"phone":"79001234568","number_sms":"2","client_id_sms":"101"}
 			],
-            "base":[
+			"base":[
 				{"base":"4","time_send":"2016-11-09 12:40"},
 				{"base":"5"}
 			],
-            "stop_base":[
+			"stop_base":[
 				{"base":"6"},
 				{"base":"7"}
 			]
