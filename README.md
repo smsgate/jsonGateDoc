@@ -423,7 +423,7 @@ https://имя_хоста/sendsmsjson.php
 		"password":"пароль"
 	},
 	"type":"pay",
-    "sum":100
+	"sum":100
 }
 ```
 **PHP-данные:**
